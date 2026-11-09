@@ -141,13 +141,13 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
 </ul></nav>
 <main>
 <header id="top">
-  <p class="eyebrow">Starfield 1.16.244.0 &middot; 6,775 game settings &middot; 4,818 INI settings &middot; +3,769 Creation Kit only &middot; built 2026-11-09 02:41 UTC</p>
+  <p class="eyebrow">Starfield 1.16.244.0 &middot; 6,775 game settings &middot; 4,818 INI settings &middot; +3,769 Creation Kit only &middot; built 2026-11-09 15:46 UTC</p>
   <h1>Starfield Game Settings</h1>
-  <p class="lede">Every setting Starfield knows about, with its built-in default value: the game settings you change with <code>setgs</code>,
+  <p class="lede">This page lists every setting Starfield knows about, with its built-in default value: the game settings you change with <code>setgs</code>,
   the INI settings you change with <code>setini</code> or an INI file, and the extra ones only the Creation Kit uses.
   <code>Starfield.esm</code> holds records for only 2,312 game settings; the other 4,463 are built into the game and use their defaults.</p>
   <p class="byline">By <a href="https://github.com/taosecurity" target="_blank" rel="noopener">Richard Bejtlich</a>, <a href="https://www.youtube.com/@RichardBejtlich" target="_blank" rel="noopener">Richard Presents Starfield Essentials</a> on YouTube</p>
-  <p class="byline">More Starfield tools and references: <a href="https://taosecurity.github.io/">Richard Presents Development Hub</a>.</p>
+  <p class="byline">More Starfield tools and references are on the <a href="https://taosecurity.github.io/">Richard Presents Development Hub</a>.</p>
   <p class="thanks">Thank you to <strong>FearTheReap3r</strong> for pointing me to his spreadsheet, the
   <a href="https://www.nexusmods.com/starfield/mods/18443" target="_blank" rel="noopener">Starfield Game Settings Database</a> on Nexus Mods. It showed that the game has far more settings than
   the records in <code>Starfield.esm</code>, and it led to this page. <a href="#thanks">More</a></p>
@@ -158,7 +158,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   <div class="kinds">
     <div class="kind" style="--h: 222">
       <h3>Game settings <span class="n">6,775</span></h3>
-      <p>Tuning numbers and texts for gameplay: jump height, prices, AI timings, ship handling, menu wording. In plugins they are <code>GMST</code> records.</p>
+      <p>These are tuning numbers and texts for gameplay: jump height, prices, AI timings, ship handling, menu wording. In plugins they are <code>GMST</code> records.</p>
       <ul>
         <li><strong>6,575</strong> are built into the game with a default value.</li>
         <li><strong>2,112</strong> of those also have a record in <code>Starfield.esm</code>, and <a href="#list" data-kind="game" data-changed="1">1,215 of those records change the default</a>.</li>
@@ -168,7 +168,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     </div>
     <div class="kind" style="--h: 150">
       <h3>INI settings <span class="n">4,818</span></h3>
-      <p>Engine and display options read from the INI files (<code>StarfieldCustom.ini</code>, <code>StarfieldPrefs.ini</code>): graphics, camera, audio, controls, debugging.</p>
+      <p>These are engine and display options read from the INI files (<code>StarfieldCustom.ini</code>, <code>StarfieldPrefs.ini</code>): graphics, camera, audio, controls, debugging.</p>
       <ul>
         <li>Each has a <strong>section</strong>, written after a colon: <code>fFPWorldFOV:Camera</code> is <code>fFPWorldFOV</code> in the <code>[Camera]</code> section.</li>
         <li>They are not plugin records, so mods can't change them through a plugin.</li>
@@ -177,7 +177,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     </div>
     <div class="kind" style="--h: 35">
       <h3>Creation Kit only <span class="n">3,769</span></h3>
-      <p>Settings that only <code>CreationKit.exe</code> defines: editor windows, tooltips, preview and export options, plus 30 old game settings the game itself no longer has.</p>
+      <p>These are settings that only <code>CreationKit.exe</code> defines: editor windows, tooltips, preview and export options, plus 30 old game settings the game itself no longer has.</p>
       <ul>
         <li>They do nothing in the game. They are listed so a name you meet in the Creation Kit can be found here.</li>
         <li>The Creation Kit's defaults are harder to read, so many are blank.</li>
@@ -195,11 +195,11 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     <div class="kind" style="--h: 100">
       <h3>Settings worth trying</h3>
       <ul>
-        <li><a href="#list" data-q="fFPWorldFOV"><code>fFPWorldFOV:Camera</code></a>, the first-person field of view (default 85), and <code>fTPWorldFOV:Camera</code>, third person (90).
-        Wider: <code>setini "fFPWorldFOV:Camera" 100</code></li>
-        <li><a href="#list" data-q="fCalendarTimeScaleSpace"><code>fCalendarTimeScaleSpace</code></a>, how fast time passes in space. Built in as 10, but <code>Starfield.esm</code> sets 5:
-        a good example of the two value columns. <code>getgs fCalendarTimeScaleSpace</code></li>
-        <li><a href="#list" data-q="fJumpHeightMin"><code>fJumpHeightMin</code></a>, jump height (1.285875). Moon jump: <code>setgs fJumpHeightMin 3</code></li>
+        <li><a href="#list" data-q="fFPWorldFOV"><code>fFPWorldFOV:Camera</code></a> sets the first-person field of view (default 85), and <code>fTPWorldFOV:Camera</code> sets third person (90).
+        For a wider view, type <code>setini "fFPWorldFOV:Camera" 100</code></li>
+        <li><a href="#list" data-q="fCalendarTimeScaleSpace"><code>fCalendarTimeScaleSpace</code></a> sets how fast time passes in space. It is built in as 10, but <code>Starfield.esm</code> sets 5,
+        which makes it a good example of the two value columns. Check it with <code>getgs fCalendarTimeScaleSpace</code></li>
+        <li><a href="#list" data-q="fJumpHeightMin"><code>fJumpHeightMin</code></a> sets jump height (1.285875). For a moon jump, type <code>setgs fJumpHeightMin 3</code></li>
       </ul>
       <p>Console changes last until you quit, so try them on a test save first.</p>
     </div>
@@ -218,10 +218,10 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <ul>
         <li><a href="#list" data-q="sAutoLockPickBrokePick"><code>sAutoLockPickBrokePick</code></a>: the text built into the game still says <em>"You broke a bobby pin."</em>, Fallout's lockpick.
         <code>Starfield.esm</code> changes it to <em>"You used up a digipick."</em></li>
-        <li><a href="#list" data-q="iArrowInventoryChance"><code>iArrowInventoryChance</code></a>: a Skyrim archery setting, the chance an arrow that hits someone ends up in their inventory.
-        Still there (built-in 50, <code>Starfield.esm</code> 33), with no arrows to use it on.</li>
-        <li><a href="#list" data-q="iClassWitchhunter"><code>iClassWitchhunter</code></a>: a Skyrim character class, still listed in the Creation Kit.</li>
-        <li><a href="#list" data-q="bPlayerDivingEnabled"><code>bPlayerDivingEnabled</code></a>: built into the game and off by default, a sign of a feature that didn't ship. We haven't tested what turning it on does.</li>
+        <li><a href="#list" data-q="iArrowInventoryChance"><code>iArrowInventoryChance</code></a> is a Skyrim archery setting: the chance an arrow that hits someone ends up in their inventory.
+        It is still there (built-in 50, <code>Starfield.esm</code> 33), with no arrows to use it on.</li>
+        <li><a href="#list" data-q="iClassWitchhunter"><code>iClassWitchhunter</code></a> is a Skyrim character class, still listed in the Creation Kit.</li>
+        <li><a href="#list" data-q="bPlayerDivingEnabled"><code>bPlayerDivingEnabled</code></a> is built into the game and off by default, a sign of a feature that didn't ship. We haven't tested what turning it on does.</li>
       </ul>
     </div>
   </div>
@@ -260,7 +260,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
     <li><strong>INI settings:</strong> <code>getini "fFPWorldFOV:Camera"</code> shows the value; <code>setini "fFPWorldFOV:Camera" 90</code> changes it. Give the name with its section, in quotes.</li>
     <li>A console change lasts until you quit the game. To keep an INI setting, put it in <code>StarfieldCustom.ini</code> in <code>Documents\My Games\Starfield</code> under its section, for example <code>[Camera]</code> then <code>fFPWorldFOV=90</code>. To keep a game setting, use a mod.</li>
     <li>A setting being listed doesn't mean changing it is safe or does anything visible. Many are for debugging or are no longer used. Try changes on a test save first.</li>
-    <li>More about these commands on the <a href="https://taosecurity.github.io/starfield-console-commands/" target="_blank" rel="noopener">Starfield Console Commands</a> page.</li>
+    <li>The <a href="https://taosecurity.github.io/starfield-console-commands/" target="_blank" rel="noopener">Starfield Console Commands</a> page has more about these commands.</li>
   </ul>
 </section>
 <section id="about" class="about">
@@ -285,8 +285,8 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
   with the Creation Kit's categories.</p>
 </section>
 <footer>
-  <p>Made by <a href="https://github.com/taosecurity" target="_blank" rel="noopener">Richard Bejtlich</a> of Richard Presents Starfield Essentials: <a href="https://www.youtube.com/@RichardBejtlich" target="_blank" rel="noopener">youtube.com/@RichardBejtlich</a>.</p>
-  <p>Unofficial list, not made or endorsed by Bethesda. Starfield is a trademark of ZeniMax Media.</p>
+  <p><a href="https://github.com/taosecurity" target="_blank" rel="noopener">Richard Bejtlich</a> of Richard Presents Starfield Essentials made this page: <a href="https://www.youtube.com/@RichardBejtlich" target="_blank" rel="noopener">youtube.com/@RichardBejtlich</a>.</p>
+  <p>This is an unofficial list, not made or endorsed by Bethesda. Starfield is a trademark of ZeniMax Media.</p>
 </footer>
 </main>
 </div>
