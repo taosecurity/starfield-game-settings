@@ -149,7 +149,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
 </ul></nav>
 <main>
 <header id="top">
-  <p class="eyebrow">Starfield 1.16.244.0 &middot; 6,834 game settings &middot; 4,923 INI settings &middot; +3,774 Creation Kit only &middot; built 2026-11-20 13:09 UTC</p>
+  <p class="eyebrow">Starfield 1.16.244.0 &middot; 6,834 game settings &middot; 4,923 INI settings &middot; +3,774 Creation Kit only &middot; built 2026-11-20 20:38 UTC</p>
   <h1>Starfield Game Settings</h1>
   <p class="lede">This page lists every setting Starfield knows about, with its built-in default value: the game settings you change with <code>setgs</code>,
   the INI settings you change with <code>setini</code> or an INI file, and the extra ones only the Creation Kit uses.
@@ -163,6 +163,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
 <section id="news" class="about">
   <h2>What's new</h2>
   <ul>
+    <li><strong>2026-11-20.</strong> The console section now says how to open the console, and the value-type list uses the spelling color.</li>
     <li><strong>2026-11-19.</strong> The page now includes the 17 game settings that exist only in the DLC, for 6,834 settings in all.</li>
     <li><strong>2026-11-19.</strong> Two extraction bugs were fixed, and the counts were checked against version 2.0.0 of the settings spreadsheet.</li>
     <li><strong>2026-11-09.</strong> A Clear button next to the search box empties it in one click.</li>
@@ -205,7 +206,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
       <p>The first letter says the kind of value:</p>
       <ul>
         <li><code>f</code> a number with decimals, <code>i</code> a whole number, <code>u</code> a whole number that can't go below zero</li>
-        <li><code>b</code> on or off (1 or 0), <code>s</code> a text, <code>a</code> a colour (red, green, blue, alpha)</li>
+        <li><code>b</code> on or off (1 or 0), <code>s</code> a text, <code>a</code> a color (red, green, blue, alpha)</li>
       </ul>
       <p>Game settings can also have a <strong>category</strong>, the folder the Creation Kit shows them in (such as <code>Mods</code> or <code>ThirdPersonCam</code>). No category means the main group.</p>
     </div>
@@ -273,6 +274,7 @@ footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line)
 <section id="use" class="about">
   <h2>Using them in the console</h2>
   <ul>
+    <li>Open the console with the <kbd>~</kbd> key (PC only), type the command and press Enter.</li>
     <li><strong>Game settings:</strong> <code>getgs fJumpHeightMin</code> shows the value; <code>setgs fJumpHeightMin 300</code> changes it. Give the name without its category.</li>
     <li><strong>INI settings:</strong> <code>getini "fFPWorldFOV:Camera"</code> shows the value; <code>setini "fFPWorldFOV:Camera" 90</code> changes it. Give the name with its section, in quotes.</li>
     <li>A console change lasts until you quit the game. To keep an INI setting, put it in <code>StarfieldCustom.ini</code> in <code>Documents\My Games\Starfield</code> under its section, for example <code>[Camera]</code> then <code>fFPWorldFOV=90</code>. To keep a game setting, use a mod.</li>
